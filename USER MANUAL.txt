@@ -1,0 +1,109 @@
+User Manual for Networking Simulation Project
+Introduction
+
+Welcome to the Networking Simulation project! This project simulates a simple network topology and demonstrates routing protocol behavior using Dijkstra's algorithm to find the shortest path between routers. The tool is built in Python and uses the NetworkX library to model the network and the Matplotlib library to visualize the network topology.
+
+This user manual will guide you on how to use the simulation, understand its features, and make the most of it.
+
+Features
+Create and Visualize Network Topology: The application allows you to define a basic network with nodes (routers) and edges (links with weights). The network is visualized using a graph.
+Shortest Path Calculation: Using Dijkstra's algorithm, the app calculates the shortest path from a starting node (router) to all other nodes (routers) in the network.
+Routing Simulation: Users can simulate network behavior by calculating the optimal routing paths based on the link costs (weights).
+System Requirements
+Python 3.x installed on your system.
+NetworkX and Matplotlib libraries.
+You can install the required libraries by running the following command:
+bash
+Copy code
+pip install networkx matplotlib
+Installation Instructions
+Ensure Python 3.x is Installed: If you do not have Python 3.x installed, download it from the official website.
+
+Install Dependencies: Open your terminal or command prompt and install the necessary Python libraries:
+
+bash
+Copy code
+pip install networkx matplotlib
+Download the Project Files: Download or clone the Networking Simulation Python script.
+
+Run the Script: Open a terminal or command prompt, navigate to the folder containing the script, and execute the following:
+
+bash
+Copy code
+python network_simulation.py
+How to Use the Networking Simulation
+Running the Simulation:
+
+Once the script is executed, it will:
+Create a predefined network topology with 4 routers and 5 links.
+Visualize the network topology using Matplotlib.
+Calculate the shortest paths from a chosen router (Router1).
+Display the shortest paths and their corresponding distances in the terminal.
+Network Visualization:
+
+The network topology will appear as a graphical representation in a pop-up window.
+Routers are shown as nodes, and the links between them are represented by edges with weights (costs).
+This visualization helps you understand the layout of the network and how the routers are connected.
+Shortest Path Calculation:
+
+After the network is visualized, the program will use Dijkstra’s algorithm to find the shortest path from Router1 to all other routers.
+The output will show the shortest path from Router1 to each of the other routers along with the total distance (sum of the link weights).
+Viewing Specific Routing Information:
+
+The simulation will print the shortest path from Router1 to Router4 as an example.
+You can modify the code to compute the shortest paths from any router to any other router by adjusting the parameters in the code.
+
+Key Terminology
+Router: A node in the network that forwards data packets between other nodes.
+Link: A connection between two routers, representing a communication path. Each link has a "weight" or "cost," which is used by the algorithm to compute the best route.
+Dijkstra's Algorithm: A graph search algorithm used to find the shortest paths between nodes in a weighted graph. It works by gradually expanding the set of nodes whose shortest distance from the start node is known.
+NetworkX: A Python library used to create, manipulate, and study the structure of complex networks.
+Matplotlib: A plotting library used to create visualizations of the network.
+Understanding the Output
+Network Topology:
+
+After the simulation is executed, the first output is a visual representation of the network topology. The nodes represent routers, and the edges represent the links between them, with the weights (costs) displayed.
+Shortest Paths:
+
+The program will output the shortest paths from Router1 to all other routers, displaying the path and the total distance.
+
+Example output:
+rust
+Copy code
+Shortest Paths from Router1:
+To Router2: Path = Router1 -> Router2, Distance = 1
+To Router3: Path = Router1 -> Router2 -> Router3, Distance = 3
+To Router4: Path = Router1 -> Router2 -> Router3 -> Router4, Distance = 6
+Specific Path Example:
+
+The simulation will also output a specific path from Router1 to Router4:
+rust
+Copy code
+Specific Path from Router1 to Router4: Path = Router1 -> Router2 -> Router3 -> Router4, Distance = 6
+Customization and Further Use
+Custom Network Topology:
+To simulate different network topologies, you can modify the create_network_topology() function. Add or remove routers and links, and adjust the weights of the links accordingly.
+Custom Routing Calculation:
+To simulate routing between other routers, modify the starting node (currently set to Router1) in the dijkstra_algorithm() function.
+Multiple Algorithms:
+You can extend this simulation to include other routing algorithms like Bellman-Ford, RIP, or OSPF for more complex simulations.
+Troubleshooting
+Error: ModuleNotFoundError:
+
+If you encounter an error such as ModuleNotFoundError: No module named 'networkx', it means that the required libraries are not installed. Make sure to run:
+bash
+Copy code
+pip install networkx matplotlib
+Error: Visualization Not Displaying:
+
+Ensure that you have Matplotlib properly installed. If the visualization window does not appear, check if any errors are thrown in the terminal, which may provide clues to resolve the issue.
+Conclusion
+This Networking Simulation tool provides a hands-on way to visualize and simulate network routing, helping users understand network behaviors and routing protocols like Dijkstra’s algorithm. You can customize and extend the simulation to model larger networks and experiment with various routing protocols. This project serves as an excellent educational tool for students and professionals interested in networking concepts.
+
+For further questions or to suggest improvements, feel free to reach out via the contact form on my Tech Blog and Portfolio Website.
+
+
+
+
+
+
