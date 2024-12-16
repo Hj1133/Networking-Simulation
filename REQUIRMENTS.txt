@@ -1,0 +1,84 @@
+Requirements for Networking Simulation Project
+Introduction
+The Networking Simulation project is a Python-based tool designed to simulate simple network topologies and demonstrate routing protocol behavior. This page outlines the software, hardware, and external dependencies required to run the simulation.
+
+Software Requirements
+Python Version:
+
+Python 3.x or higher is required to run the Networking Simulation project.
+You can download the latest version of Python from python.org.
+Required Python Libraries:
+
+The simulation uses several Python libraries to create, manipulate, and visualize the network graph. Ensure the following libraries are installed:
+NetworkX: A library for the creation, manipulation, and study of complex networks. It is used to model the network topology and calculate the shortest path using Dijkstra’s algorithm.
+Matplotlib: A plotting library to visualize the network topology and routing paths.
+To install these libraries, run the following command in your terminal or command prompt:
+
+bash
+Copy code
+pip install networkx matplotlib
+Text Editor or Integrated Development Environment (IDE):
+
+You will need a text editor or IDE to modify the code if necessary. Some popular options include:
+VSCode: Visual Studio Code is a lightweight, powerful code editor.
+PyCharm: A Python-specific IDE.
+Sublime Text: A simple text editor with code support.
+Hardware Requirements
+The hardware requirements for this project are minimal. Any system capable of running Python should be sufficient for running the Networking Simulation.
+
+Processor: Any modern processor (Intel i3 or higher recommended).
+RAM: 4 GB of RAM or higher.
+Storage: Less than 1 MB of disk space (for storing the Python script and installed libraries).
+Display: A screen with a resolution capable of displaying graphical windows (any standard display should suffice).
+Operating System Compatibility
+The Networking Simulation project is compatible with multiple operating systems, including:
+
+Windows (Windows 10/11 recommended)
+macOS
+Linux (Ubuntu, Fedora, or other distributions)
+Ensure that Python and the required libraries can be installed on your system.
+
+Network Connectivity
+While this simulation is local and does not require an active internet connection, Matplotlib may need internet access to fetch certain fonts or other resources when running the graphical user interface (GUI). An internet connection may be required for the initial library installation.
+
+Running the Simulation
+Once the required software and libraries are installed, you can run the simulation by following these steps:
+
+Navigate to the Project Directory:
+
+Open a terminal or command prompt window and navigate to the directory containing the Python script.
+Execute the Python Script:
+
+Run the script with the following command:
+bash
+Copy code
+python network_simulation.py
+View the Visualization:
+
+The network topology will appear in a separate window (Matplotlib window).
+The terminal will show the calculated shortest paths.
+Customization Requirements
+If you wish to customize the network topology or routing parameters, you can modify the Python code as follows:
+
+Modify the Network Topology:
+
+You can add or remove routers by modifying the create_network_topology() function in the script.
+Adjust the link weights (costs) to simulate different network conditions.
+Routing Protocol Customization:
+
+The simulation currently uses Dijkstra’s algorithm, but you can extend it to support other algorithms like Bellman-Ford or OSPF by adjusting the logic in the routing calculation section of the code.
+Troubleshooting
+Missing Libraries:
+
+If you receive an error such as ModuleNotFoundError: No module named 'networkx', make sure the required libraries are installed by running:
+bash
+Copy code
+pip install networkx matplotlib
+Visualization Not Displaying:
+
+Ensure that you have installed Matplotlib and that the graphical window is not being blocked by firewall or system settings.
+Slow Performance:
+
+If the simulation takes too long to run, try simplifying the network topology or optimizing the code for larger networks.
+Conclusion
+This page outlines the basic requirements needed to run the Networking Simulation project. The tool is lightweight and compatible with most modern systems. By following the installation and running instructions, you will be able to visualize network topologies, calculate the shortest paths using Dijkstra’s algorithm, and customize the network to suit different simulation needs.
